@@ -1,13 +1,30 @@
 # robots.txt for MultiFire System
+# Last updated: January 22, 2026
 
 User-agent: *
 Allow: /
+Allow: /index.html
+Disallow: /node_modules
+Disallow: /*.json$
+Disallow: /*.config.js$
+
+# Specific search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
 
 # Sitemaps
-Sitemap: https://multifiresystem.com/sitemap.xml
+Sitemap: https://ak-multifire.vercel.app/sitemap.xml
 
-# Crawl-delay
+# Crawl-delay (in seconds)
 Crawl-delay: 1
+
+# Request-rate
+Request-rate: 1/1s
 
 # Disallow admin and private directories (if any in future)
 Disallow: /admin/
